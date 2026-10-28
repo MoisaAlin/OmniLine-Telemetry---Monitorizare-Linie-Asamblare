@@ -1,0 +1,6 @@
+{
+  "name": "OmniLine Telemetry - Monitorizare Linie Asamblare",
+  "description": "Sistem industrial de monitorizare în timp real a liniei de asamblare, eficiență OEE, senzori telemetrici, rutină automată de siguranță și alerte de mentenanță.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

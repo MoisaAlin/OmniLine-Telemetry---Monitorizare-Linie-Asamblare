@@ -1,11 +1,45 @@
-<div align="center">
+# OmniLine Telemetry - Sistem Industrial de Monitorizare Linie de Asamblare & OEE
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Aplicație SCADA / MOM pentru monitorizarea în timp real a liniei de asamblare industriale, eficienței OEE, telemetriei senzorilor, detectării anomaliilor de calitate și protecției automate prin rutină de siguranță.
 
-  <h1>Built with AI Studio</h2>
+---
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Documentația Completă a Aplicației
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+Toate ghidurile detaliate se găsesc în directorul `/docs/`:
 
-</div>
+1. **[`/docs/PREZENTARE_SI_GHID_UTILIZARE.md`](docs/PREZENTARE_SI_GHID_UTILIZARE.md)**
+   - Prezentare generală a aplicației
+   - Cum funcționează sistemul (fluxul telemetric, rutina de siguranță, calculul OEE)
+   - Ghid de utilizare pas-cu-pas (navigare, simulare defecte, deblocare interlock, tipărire rapoarte)
+   - Taste rapide și comenzi de securitate
+
+2. **[`/docs/ARHITECTURA_TEHNICA.md`](docs/ARHITECTURA_TEHNICA.md)**
+   - Arhitectura componentelor React / TypeScript
+   - Modelul de date și interfețele senzorilor
+   - Motorul de sinteză audio (Web Audio API) fără dependențe externe
+
+3. **[`/docs/STANDARDE_CALITATE_SI_OEE.md`](docs/STANDARDE_CALITATE_SI_OEE.md)**
+   - Formulele OEE conform ISO 22400 (Disponibilitate, Performanță, Calitate)
+   - Matricea toleranțelor micronice și standarde de precizie
+   - Clasificarea Pareto a defectelor de fabricație
+
+4. **[`/docs/MANUAL_MENTENANTA_SI_RUTINA_SIGURANTA.md`](docs/MANUAL_MENTENANTA_SI_RUTINA_SIGURANTA.md)**
+   - Secvența automată de Safe Stop (decelerație, carantinare reper, blocare LOTO)
+   - Procedura de mentenanță și remediere SOP-IND-402
+   - Protocolul de validare tehnician înainte de reluarea producției
+
+---
+
+## Pornire & Rulare Proiect
+
+```bash
+# Instalare dependențe
+npm install
+
+# Rulare server de dezvoltare
+npm run dev
+
+# Compilare pentru producție
+npm run build
+```

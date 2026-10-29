@@ -53,22 +53,22 @@ export const SafetyRoutineBanner: React.FC<SafetyRoutineBannerProps> = ({
           </div>
         </div>
 
-        <div className="flex items-center gap-3 shrink-0 self-end lg:self-center">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full lg:w-auto justify-start lg:justify-end mt-2 lg:mt-0">
           <button
             onClick={onOpenIncidentReport}
-            className="px-3 py-2 bg-slate-900/80 hover:bg-slate-900 text-rose-200 hover:text-white border border-rose-500/30 rounded-lg text-xs font-medium flex items-center gap-2 transition-colors whitespace-nowrap"
+            className="px-3 py-2 bg-slate-900/80 hover:bg-slate-900 text-rose-200 hover:text-white border border-rose-500/30 rounded-lg text-xs font-medium flex items-center gap-2 transition-colors flex-1 sm:flex-initial justify-center"
           >
-            <FileText className="w-4 h-4 text-rose-400" />
-            <span>Fișă Incident Generată</span>
+            <FileText className="w-4 h-4 text-rose-400 shrink-0" />
+            <span>Fișă Incident</span>
           </button>
 
           <button
             onClick={onOpenSafetyModal}
-            className="px-4 py-2 bg-rose-600 hover:bg-rose-500 text-white rounded-lg text-xs font-semibold flex items-center gap-2 shadow-lg shadow-rose-950/60 transition-all whitespace-nowrap"
+            className="px-3.5 py-2 bg-rose-600 hover:bg-rose-500 text-white rounded-lg text-xs font-semibold flex items-center gap-2 shadow-md shadow-rose-950/60 transition-all flex-1 sm:flex-initial justify-center"
           >
-            <Wrench className="w-4 h-4" />
-            <span>Protocol Repornire & Deblocare</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <Wrench className="w-4 h-4 shrink-0" />
+            <span>Deblocare & Repornire</span>
+            <ArrowRight className="w-3.5 h-3.5 shrink-0 hidden xs:inline" />
           </button>
         </div>
       </div>

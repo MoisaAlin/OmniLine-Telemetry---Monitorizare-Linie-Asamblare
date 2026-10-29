@@ -69,44 +69,44 @@ export const AssemblyLineTwin: React.FC<AssemblyLineTwinProps> = ({
   return (
     <div className="space-y-6">
       {/* Visual Plant Overview Banner */}
-      <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-md">
-        <div className="relative h-48 md:h-64 w-full overflow-hidden">
+      <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-md w-full max-w-full">
+        <div className="relative min-h-[220px] sm:min-h-[240px] md:h-64 w-full overflow-hidden flex flex-col justify-end p-4 sm:p-6">
           <img
             src="/src/assets/images/assembly_line_factory_1793214287819.jpg"
             alt="Linie automată de asamblare industrială"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover object-center brightness-60"
+            className="absolute inset-0 w-full h-full object-cover object-center brightness-50"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
 
-          <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <div>
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-amber-400 text-xs font-semibold tracking-wider uppercase">
+          <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-4 w-full">
+            <div className="min-w-0">
+              <div className="flex items-center gap-2 mb-1 flex-wrap">
+                <span className="text-amber-400 text-[10px] sm:text-xs font-semibold tracking-wider uppercase">
                   Gemini-Precision Manufacturing
                 </span>
                 <span className="text-slate-500 text-xs">·</span>
-                <span className="text-slate-400 text-xs font-mono">Linia A-4 Precision Assembly</span>
+                <span className="text-slate-400 text-[10px] sm:text-xs font-mono">Linia A-4</span>
               </div>
-              <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight">
-                Digital Twin & Telemetrie Senzori în Timp Real
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-tight leading-snug">
+                Digital Twin & Telemetrie Senzori
               </h2>
-              <p className="text-xs md:text-sm text-slate-300 mt-1 max-w-2xl">
+              <p className="text-xs text-slate-300 mt-1 max-w-2xl hidden sm:block">
                 Arhitectură SCADA cu 6 stații mecatronice automatizate, monitorizare continuă a vibrațiilor, presiunii și abaterilor dimensionale.
               </p>
             </div>
 
-            <div className="flex items-center gap-3 bg-slate-950/80 border border-slate-800/80 rounded-xl p-3 shrink-0 backdrop-blur-md">
-              <div className="pr-3 border-r border-slate-800">
-                <div className="text-[11px] text-slate-400">Stare Conexiune I/O</div>
+            <div className="flex items-center gap-2.5 sm:gap-3 bg-slate-950/85 border border-slate-800/80 rounded-xl p-2.5 sm:p-3 shrink-0 backdrop-blur-md self-start md:self-auto">
+              <div className="pr-2.5 sm:pr-3 border-r border-slate-800">
+                <div className="text-[10px] text-slate-400">Conexiune I/O</div>
                 <div className="text-xs font-mono font-semibold text-emerald-400 flex items-center gap-1.5 mt-0.5">
-                  <Radio className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Profinet 100 Mbps OK</span>
+                  <Radio className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span className="whitespace-nowrap">Profinet OK</span>
                 </div>
               </div>
               <div>
-                <div className="text-[11px] text-slate-400">Stații Active</div>
-                <div className="text-xs font-mono font-semibold text-white mt-0.5">
+                <div className="text-[10px] text-slate-400">Stații Active</div>
+                <div className="text-xs font-mono font-semibold text-white mt-0.5 whitespace-nowrap">
                   {workstations.filter(w => w.status === 'nominal').length} / {workstations.length} Nominale
                 </div>
               </div>
@@ -115,14 +115,14 @@ export const AssemblyLineTwin: React.FC<AssemblyLineTwinProps> = ({
         </div>
 
         {/* Animated Conveyor Belt Track */}
-        <div className="bg-slate-950 px-6 py-4 border-t border-slate-800/80">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-mono text-slate-400 flex items-center gap-2">
-              <span className={`w-2 h-2 rounded-full ${safetyRoutine.isActive ? 'bg-rose-500 animate-ping' : 'bg-emerald-500'}`}></span>
-              Flux Bandă Transportoare Sincronizată (Indexor Pas-cu-Pas)
+        <div className="bg-slate-950 px-3 sm:px-6 py-3 sm:py-4 border-t border-slate-800/80 w-full">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2 text-xs font-mono text-slate-400">
+            <span className="flex items-center gap-1.5 truncate">
+              <span className={`w-2 h-2 rounded-full shrink-0 ${safetyRoutine.isActive ? 'bg-rose-500 animate-ping' : 'bg-emerald-500'}`}></span>
+              <span className="truncate">Bandă Transportoare (Indexor Sincron)</span>
             </span>
-            <span className="text-xs font-mono text-slate-400">
-              Viteză Transportor: {safetyRoutine.isActive ? '0.0 m/min (Oprit)' : '14.2 m/min'}
+            <span className="text-[11px] shrink-0">
+              Viteză: {safetyRoutine.isActive ? '0.0 m/min (Oprit)' : '14.2 m/min'}
             </span>
           </div>
 

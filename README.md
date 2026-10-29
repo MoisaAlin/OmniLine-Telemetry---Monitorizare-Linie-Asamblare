@@ -2,6 +2,9 @@
 
 Aplicație SCADA / MOM pentru monitorizarea în timp real a liniei de asamblare industriale, eficienței OEE, telemetriei senzorilor, detectării anomaliilor de calitate și protecției automate prin rutină de siguranță.
 
+<div align="center">
+<img width="1200" height="475" alt="Imagine1" src="https://github.com/MoisaAlin/OmniLine-Telemetry---Monitorizare-Linie-Asamblare/blob/main/printscreens/main_menu_onmiline.png" />
+</div>
 ---
 
 ## Documentația Completă a Aplicației
